@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f0f0f0;
+    }
+    .calculator {
+      width: 300px;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+      background-color: white;
+    }
+    .display {
+      width: 100%;
+      height: 50px;
+      margin-bottom: 10px;
+      text-align: right;
+      font-size: 2rem;
+      border: none;
+      padding: 10px;
+      background-color: #f7f7f7;
+    }
+    button {
+      width: 22%;
+      height: 50px;
+      margin: 1%;
+      font-size: 1.2rem;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="calculator">
+    <input type="text" class="display" id="display" readonly>
+    <button onclick="clearDisplay()">C</button>
+    <button onclick="changeSign()">+/-</button>
+    <button onclick="memoryRecall()">RM</button>
+    <button onclick="setOperator('/')">/</button>
+
+    <button onclick="appendNumber(7)">7</button>
+    <button onclick="appendNumber(8)">8</button>
+    <button onclick="appendNumber(9)">9</button>
+    <button onclick="setOperator('*')">×</button>
+
+    <button onclick="appendNumber(4)">4</button>
+    <button onclick="appendNumber(5)">5</button>
+    <button onclick="appendNumber(6)">6</button>
+    <button onclick="setOperator('-')">-</button>
+
+    <button onclick="appendNumber(1)">1</button>
+    <button onclick="appendNumber(2)">2</button>
+    <button onclick="appendNumber(3)">3</button>
+    <button onclick="setOperator('+')">+</button>
+
+    <button onclick="appendNumber(0)">0</button>
+    <button onclick="appendDecimal()">.</button>
+    <button onclick="calculateSquare()">x²</button>
+    <button onclick="calculateResult()">=</button>
+
+    <button onclick="calculateSquareRoot()">√</button>
+    <button onclick="memoryAdd()">M+</button>
+    <button onclick="memorySubtract()">M-</button>
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
